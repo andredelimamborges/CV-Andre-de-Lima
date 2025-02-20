@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Borges | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2A5C82;
+            --secondary-color: #F0F4F8;
+            --bg-color: #D3D3D3;
+            --text-color: #000000;
+            --card-bg: #FFFFFF;
+            --timeline-color: #2A5C82;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui;
+            padding-top: 80px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        .dark-mode {
+            --bg-color: #000000;
+            --text-color: #FFFFFF;
+            --card-bg: #1a1a1a;
+            --secondary-color: #3a3a3a;
+            --timeline-color: #FFFFFF;
+        }
+
+        .nav-shadow {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: var(--bg-color) !important;
+        }
+
+        .navbar-brand, .nav-link {
+            color: var(--text-color) !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(45deg, var(--primary-color), #1a365f);
+            color: white;
+            padding: 100px 0;
+        }
+
+        .skill-badge {
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            border-radius: 20px;
+            padding: 8px 20px;
+            margin: 5px;
+        }
+
+        .project-card {
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            background-color: var(--card-bg);
+        }
+
+        .timeline-item {
+            border-left: 3px solid var(--timeline-color);
+            padding-left: 25px;
+            position: relative;
+            margin-left: 15px;
+            color: var(--text-color);
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--timeline-color);
+            position: absolute;
+            left: -9px;
+            top: 5px;
+            border-radius: 50%;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer {
+            background-color: var(--card-bg);
+            color: var(--text-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão de Toggle -->
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top nav-shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">ANDRÉ BORGES</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-3">André de Lima Borges</h1>
+            <p class="lead">UX/UI Designer & Front-End Developer</p>
+            <div class="mt-4">
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Figma</span>
+                <span class="skill-badge">Git</span>
+                <span class="skill-badge">GitHub</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="mb-4" style="color: var(--primary-color);">Sobre Mim</h2>
+                    <p class="lead">Sou um profissional de tecnologia com experiência em UX/UI Design e desenvolvimento Front-End. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na UNIFEOB, com previsão de conclusão em 2025. Possuo certificações em AWS Cloud Foundations e desenvolvimento em Python, além de experiência prática em projetos de desenvolvimento web e gestão de sistemas.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="/hello.jpg" alt="UX Design" class="img-fluid rounded-3" style="border: 3px solid var(--primary-color);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiência -->
+    <section id="experiencia" class="py-5">
+        <div class="container">
+            <h2 class="mb-5 text-center" style="color: var(--primary-color);">Experiência Profissional</h2>
+            
+            <div class="timeline-item mb-5">
+                <h4>Consultor Operações e Sistemas PL</h4>
+                <p class="text-muted">MS Solutions · Jul 2024 - Presente</p>
+                <ul>
+                    <li>Gestão de sistemas corporativos</li>
+                    <li>Integrações com parceiros (Gupy e Microsoft AD)</li>
+                    <li>Melhorias contínuas no sistema da empresa</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item mb-5">
+                <h4>Coordenador de Operações JR</h4>
+                <p class="text-muted">MS Solutions · Set 2023 - Jun 2024</p>
+                <ul>
+                    <li>Coordenação do braço operacional da empresa</li>
+                    <li>Gestão de atendimentos via IA Blue e SisWEB MS</li>
+                    <li>Integrações com fornecedores</li>
+                </ul>
+            </div>
+
+            <div class="timeline-item mb-5">
+                <h4>Estagiário de Sistemas</h4>
+                <p class="text-muted">MS Solutions · Mar 2023 - Ago 2023</p>
+                <ul>
+                    <li>Atendimento a candidatos e avaliados</li>
+                    <li>Integrações com parceiros</li>
+                    <li>Suporte ao sistema corporativo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-5">
+        <div class="container">
+            <h2 class="mb-5 text-center" style="color: var(--primary-color);">Projetos</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="project-card p-4">
+                        <h4>Sistema de Registro Eletrônico de Ponto</h4>
+                        <p>Desenvolvimento de sistema automatizado para gestão de jornada de trabalho com integração Excel, NTP e criptografia AES-128.</p>
+                        <span class="badge bg-primary">Python</span>
+                        <span class="badge bg-secondary">Excel</span>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="project-card p-4">
+                        <h4>Jogo Baseado em Elden Ring</h4>
+                        <p>Desenvolvimento de jogo interativo em Python com múltiplas classes e mecânicas de combate.</p>
+                        <span class="badge bg-primary">Python</span>
+                        <span class="badge bg-secondary">Game Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4">
+        <div class="container text-center">
+            <h4 class="mb-3">Contato</h4>
+            <p>
+                <a href="mailto:andre.borges@sou.unifeob.edu.br" class="text-decoration-none me-3" style="color: var(--text-color);">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="http://wa.me/5535998816777" class="text-decoration-none" style="color: var(--text-color);">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/andre-lima/" class="me-3" style="color: var(--text-color);"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/andre-lima" class="me-3" style="color: var(--text-color);"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Dark Mode Logic
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        const savedMode = localStorage.getItem('darkMode');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedMode === 'dark' || (!savedMode && systemPrefersDark)) {
+            enableDarkMode();
+        }
+
+        function enableDarkMode() {
+            body.classList.add('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            localStorage.setItem('darkMode', 'dark');
+        }
+
+        function disableDarkMode() {
+            body.classList.remove('dark-mode');
+            darkModeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            localStorage.setItem('darkMode', 'light');
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.contains('dark-mode') ? disableDarkMode() : enableDarkMode();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Adicionar classe ativa na navegação
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('nav a');
+            
+            sections.forEach(sec => {
+                let top = window.scrollY;
+                let offset = sec.offsetTop - 150;
+                let height = sec.offsetHeight;
+                let id = sec.getAttribute('id');
+
+                if(top >= offset && top < offset + height) {
+                    navLinks.forEach(links => {
+                        links.classList.remove('active');
+                        document.querySelector('nav a[href*=' + id + ']').classList.add('active');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
